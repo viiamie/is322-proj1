@@ -1,0 +1,36 @@
+.boxwrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cardwrapper {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  text-align: right;
+  border-radius: 20px;
+}
+
+.cardcontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 475px) {
+  .content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .boxwrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1 @@
+export const Loading = ({ loadingMessage }) => <h1>{loadingMessage}</h1>;

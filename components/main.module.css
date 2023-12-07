@@ -1,0 +1,27 @@
+.boxwrapper {
+  background-color: rgb(72,72,73);
+  padding: 30px;
+  color: #484849;
+}
+
+.cardwrapper {
+  text-align: center;
+  padding: 30px;
+  display: grid;
+  place-items: center;
+  color: #484849;
+}
+
+.location {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 50px;
+}

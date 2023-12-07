@@ -17,11 +17,21 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: radial-gradient(
+    circle 995px at 0.5% 50.5%,
+    rgb(23, 81, 120) 50%,
+    rgb(58, 135, 187) 100%
+  );
+  font-family: "Varela Round", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
