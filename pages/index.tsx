@@ -30,7 +30,7 @@ export default function Home() {
     getData();
   }, [triggerFetch]);
 
-  return weatherData && !weatherData.message ? (
+  return weatherData && weatherData.message == null ? (
     <div className={styles.homewrapper}>
       <MainCard
         city={weatherData.name}
