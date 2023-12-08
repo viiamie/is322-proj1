@@ -21,11 +21,12 @@ export default function getSuggestions(weatherData) {
     { temperatureRange: [50, 59], cards: [
       { image: '/longsleeve.png', label: 'long sleeves' },
       { image: '/longpants.png', label: 'long pants' },
+      { image: '/sweater.png', label: 'sweater' },
       { image: '/hoodie.png', label: 'hoodie' },
       { image: '/socks.png', label: 'socks' },
       { image: '/sneakers.png', label: 'sneakers' },
     ] },
-    { temperatureRange: [35, 49], cards: [
+    { temperatureRange: [40, 49], cards: [
       { image: '/sweater.png', label: 'sweater' },
       { image: '/jacket.png', label: 'jacket' },
       { image: '/hoodie.png', label: 'hoodie' },
@@ -34,7 +35,7 @@ export default function getSuggestions(weatherData) {
       { image: '/sneakers.png', label: 'sneakers' },
       { image: '/boots.png', label: 'boots' },
     ] },
-    { temperatureRange: [Number.NEGATIVE_INFINITY, 34], cards: [
+    { temperatureRange: [Number.NEGATIVE_INFINITY, 39], cards: [
       { image: '/sweater.png', label: 'sweater' },
       { image: '/heavyjacket.png', label: 'heavy jacket' },
       { image: '/hoodie.png', label: 'hoodie' },
