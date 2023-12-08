@@ -7,14 +7,14 @@
 .homewrapper {
   display: grid;
   max-width: 1000px;
-  background: rgb(236, 218, 192, 0.95);
-  box-shadow: 0 8px 32px 0 rgb(200, 99, 65, 0.50);;
-  backdrop-filter: blur(3px);
+  background: rgb(200, 99, 65, 0.50);
+  box-shadow: 0 8px 30px 0 rgba(177, 105, 90, 255);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 30px;
   overflow: hidden;
   color: #484849;
-  /* grid-template-columns: 1fr 2fr;*/
+  grid-template-columns: 1fr 2fr;
 }
 
 @media only screen and (max-width: 950px) {
@@ -33,12 +33,12 @@
 }
 
 .search {
-  height: 40px;
+  height: 35px;
   font-size: 18px;
   font-family: "Varela Round", sans-serif;
   color: #484849;
   text-align: right;
-  padding: 0 10px;
+  padding: 10px 10px;
   border: none;
   border-radius: 10px;
 }
@@ -61,9 +61,14 @@
 
 .headerwrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: rgb(236, 218, 192);
 }
 
 @media only screen and (max-width: 520px) {

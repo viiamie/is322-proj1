@@ -1,20 +1,25 @@
 .boxwrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: .5fr .5fr .5fr;
+  gap: 25px;
   margin-bottom: 20px;
 }
 
 .cardwrapper {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  text-align: right;
+  background-color: rgb(236, 218, 192, 0.95);
+  padding: 10px;
+  align-content: center;
   border-radius: 20px;
 }
 
 .cardcontent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 475px) {

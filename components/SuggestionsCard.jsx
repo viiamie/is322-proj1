@@ -1,15 +1,15 @@
 import Image from "next/image";
 import styles from "./suggestions.module.css";
 
-export const suggestionsCard = ({ title, iconSrc, metric, unit }) => {
+export const SuggestionsCard = ({ card }) => {
   return (
     <div className={styles.cardwrapper}>
-      <p>{title}</p>
       <div className={styles.cardcontent}>
-        <Image width="100px" height="100px" src={iconSrc} alt="weatherIcon" />
+        <div className={styles.imageContainer}>
+          <Image width={75} height={75} src={card.image} alt={card.label} />
+        </div>
         <div>
-          <h1>{metric}</h1>
-          <p>{unit}</p>
+          <p>{card.label}</p>
         </div>
       </div>
     </div>

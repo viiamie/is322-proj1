@@ -12,14 +12,14 @@ export const MainCard = ({
 }) => {
   return (
     <div className={styles.cardwrapper}>
-        <DateTime weatherData={weatherData} />
+      <DateTime weatherData={weatherData} />
       <h1 className={styles.location}>
         {city}, {country}
       </h1>
       <p className={styles.description}>{description}</p>
       <Image
-          width={150}
-          height={150}
+          width={125}
+          height={125}
           src={`https://openweathermap.org/img/wn/${iconName}@2x.png`}
           alt="weatherIcon"
       />
@@ -31,9 +31,9 @@ export const MainCard = ({
       </h1>
       <p>
         Feels like{" "}
-            {Math.round(weatherData.main.temp)}
+            {Math.round(weatherData.main.feels_like)}
             °{"C"} | {
-            Math.round(ctoF(weatherData.main.temp))}
+            Math.round(ctoF(weatherData.main.feels_like))}
             °{"F"}
       </p>
     </div>

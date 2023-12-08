@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { MainCard } from "@/components/MainCard";
 import { MainBox } from "@/components/MainBox";
-import { DateTime } from "@/components/DateTime";
+import { SuggestionsBox } from "@/components/SuggestionsBox";
 import { Search } from "@/components/Search";
 import { Loading } from "@/components/Loading";
 import { Error } from "@/components/Error";
@@ -41,7 +41,7 @@ export default function Home() {
       />
       <MainBox>
         <Header>
-
+          <h1 className={styles.title}> What to Wear: </h1>
           <Search
             placeHolder="Search for a city..."
             value={cityInput}
@@ -56,10 +56,11 @@ export default function Home() {
             }}
           />
         </Header>
+        <SuggestionsBox weatherData={weatherData} />
       </MainBox>
     </div>
   ) : weatherData && weatherData.message ? (
-    <Error errorMessage="City not found, try again!">
+    <Error errorMessage="City not found, please try again!">
       <Search
         onFocus={(i) => (i.target.value = "")}
         onChange={(i) => setCityInput(i.target.value)}
