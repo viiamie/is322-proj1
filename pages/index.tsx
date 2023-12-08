@@ -14,7 +14,7 @@ import styles from "../styles/home.module.css";
 export default function Home() {
   const [cityInput, setCityInput] = useState("New York");
   const [triggerFetch, setTriggerFetch] = useState(true);
-  const [weatherData, setWeatherData] = useState();
+  const [weatherData, setWeatherData] = useState< any | null>(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -30,7 +30,7 @@ export default function Home() {
     getData();
   }, [triggerFetch]);
 
-  return weatherData && weatherData.message == null ? (
+  return weatherData && !weatherData.message ? (
     <div className={styles.homewrapper}>
       <MainCard
         city={weatherData.name}
@@ -45,14 +45,16 @@ export default function Home() {
           <Search
             placeHolder="Search for a city..."
             value={cityInput}
-            onFocus={(i) => {
-              i.target.value = "";
-              i.target.placeholder = "";
+            onFocus={(e: React.FocusEvent<HTMLInputElement>) => {
+                e.target.value = "";
+                e.target.placeholder = "";
             }}
-            onChange={(i) => setCityInput(i.target.value)}
-            onKeyDown={(i) => {
-              i.keyCode === 13 && setTriggerFetch(!triggerFetch);
-              i.target.placeholder = "Search for a city...";
+            onChange={(e: React.FocusEvent<HTMLInputElement>) => setCityInput(e.target.value)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                const event = e as React.KeyboardEvent<HTMLInputElement>;
+                if (event.code === "Enter") {
+                    setTriggerFetch(!triggerFetch);
+                }
             }}
           />
         </Header>
@@ -62,9 +64,19 @@ export default function Home() {
   ) : weatherData && weatherData.message ? (
     <Error errorMessage="City not found, please try again!">
       <Search
-        onFocus={(i) => (i.target.value = "")}
-        onChange={(i) => setCityInput(i.target.value)}
-        onKeyDown={(i) => i.keyCode === 13 && setTriggerFetch(!triggerFetch)}
+        placeHolder="Search for a city..."
+        value={cityInput}
+        onFocus={(e: React.FocusEvent<HTMLInputElement>) => {
+          e.target.value = "";
+          e.target.placeholder = "";
+        }}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCityInput(e.target.value)}
+        onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+          const event = e as React.KeyboardEvent<HTMLInputElement>;
+          if (event.code === "Enter") {
+            setTriggerFetch(!triggerFetch);
+          }
+        }}
       />
     </Error>
   ) : (

@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const ctoF = (c) => (c * 9) / 5 + 32;
 
 export const timeTo12HourFormat = (time) => {
