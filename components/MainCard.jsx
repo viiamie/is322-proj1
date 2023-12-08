@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ctoF } from "@/pages/helpers";
+import { ctoF } from "@/components/helpers";
 import styles from "./main.module.css";
 import { DateTime } from "@/components/DateTime";
 

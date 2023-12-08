@@ -1,5 +1,5 @@
 import { SuggestionsCard } from "./SuggestionsCard";
-import getSuggestions from "@/pages/suggestions";
+import getSuggestions from "@/components/suggestions";
 import styles from "./suggestions.module.css";
 
 export const SuggestionsBox = ({ weatherData }) => {

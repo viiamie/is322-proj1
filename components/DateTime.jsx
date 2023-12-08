@@ -1,4 +1,4 @@
-import { getWeekDay, getTime, getAMPM } from "../pages/helpers";
+import { getWeekDay, getTime, getAMPM } from "./helpers";
 import styles from "../styles/home.module.css";
 
 export const DateTime = ({ weatherData }) => {

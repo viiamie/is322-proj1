@@ -1,4 +1,4 @@
-import { ctoF } from "@/pages/helpers";
+import { ctoF } from "@/components/helpers";
 
 export default function getSuggestions(weatherData) {
   const temp = Math.round(ctoF(weatherData.main.temp))
